@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,17 +9,34 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <title>sidepro:: static</title>
     <style>
+      html,
       body {
         height: 100%;
         margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+
+      body {
         background-color: #81a1c1;
         font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono",
           "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono",
           "Courier New", monospace;
         color: #1c1c1c;
-        max-width: 600px;
-        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
+
+      .content {
+        max-width: 600px;
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        overflow-y: auto;
+        flex-grow: 1;
+      }
+
       a {
         color: #2f4f4f;
         text-decoration: dotted;
@@ -27,39 +45,42 @@
       a:hover {
         background-color: #add8e6;
       }
+
+      .header {
+        margin-top: 20vh;
+        margin-bottom: 40px;
+        text-align: center;
+      }
+
+      .footer {
+        margin-top: 40px;
+      }
     </style>
   </head>
   <body>
-    <div
-      style="
-        margin-top: 20vh;
-        margin-bottom: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-      "
-    >
-      <h1>
-        my
-        <a href="https://www.smallweb.run">smallweb</a>
-        👋
-      </h1>
-    </div>
+    <div class="content">
+      <div class="header">
+        <h1>
+          my
+          <a href="https://www.smallweb.run">smallweb</a>
+          👋
+        </h1>
+      </div>
 
-    <p>Available sites:</p>
-    <ul>
-      <li>
-        <a href="https://example.localhost">example</a>
-      </li>
-    </ul>
+      <p>Available sites:</p>
+      <ul>
+        <li>
+          <a href="https://example.localhost">example</a>
+        </li>
+      </ul>
 
-    <div style="margin-top: 40px">
-      <p>expertly hosted by <a href="https://docs.sidepro.cloud">SidePro</a></p>
-      <p>
-        Container image built by and deployed from
-        <a href="https://github.com/cablehead/smallweb-sidepro">Github</a>.
-      </p>
+      <div class="footer">
+        <p>expertly hosted by <a href="https://docs.sidepro.cloud">SidePro</a></p>
+        <p>
+          Container image built by and deployed from
+          <a href="https://github.com/cablehead/smallweb-sidepro">Github</a>.
+        </p>
+      </div>
     </div>
   </body>
 </html>
