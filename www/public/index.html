@@ -25,15 +25,14 @@
         color: #1c1c1c;
         display: flex;
         flex-direction: column;
-        align-items: center;
       }
 
-      .content {
+      main {
         max-width: 600px;
         width: 100%;
-        padding: 20px;
         box-sizing: border-box;
         overflow-y: auto;
+        margin: 0 auto;
         flex-grow: 1;
       }
 
@@ -46,26 +45,39 @@
         background-color: #add8e6;
       }
 
-      .header {
+      header {
         margin-top: 20vh;
-        margin-bottom: 40px;
+        margin-bottom: 10vh;
         text-align: center;
       }
 
-      .footer {
-        margin-top: 40px;
+      footer {
+        background-color: #81a1c1;
+        color: #1c1c1c;
+        box-sizing: border-box;
+        margin-top: 20vh;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+				gap: 0.25em;
+      }
+
+      footer object {
+        width: 2em;
+        height: 2.25em;
+				padding-bottom: 0.25em;
       }
     </style>
   </head>
   <body>
-    <div class="content">
-      <div class="header">
+    <main>
+      <header>
         <h1>
           my
           <a href="https://www.smallweb.run">smallweb</a>
           👋
         </h1>
-      </div>
+      </header>
 
       <p>Available sites:</p>
       <ul>
@@ -73,14 +85,11 @@
           <a href="https://example.localhost">example</a>
         </li>
       </ul>
-
-      <div class="footer">
-        <p>expertly hosted by <a href="https://docs.sidepro.cloud">SidePro</a></p>
-        <p>
-          Container image built by and deployed from
-          <a href="https://github.com/cablehead/smallweb-sidepro">Github</a>.
-        </p>
-      </div>
-    </div>
+      <footer>
+				<span>hosting <a href="https://docs.sidepro.cloud">SidePro</a></span>
+				<span>💙</span>
+        <object type="image/svg+xml" data="toronto.svg"></object>
+      </footer>
+    </main>
   </body>
 </html>
