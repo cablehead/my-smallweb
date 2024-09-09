@@ -93,7 +93,11 @@
       <p>Available sites:</p>
       <ul>
         <li>
-          <a href="https://example.localhost">example</a>
+          <a
+            href="javascript:void(0);"
+            onclick="this.href = window.location.protocol + '//' + 'example.' + window.location.hostname.split('.').slice(1).join('.');"
+            >example</a
+          >
         </li>
       </ul>
       <footer>
@@ -101,6 +105,9 @@
         <span>💙</span>
         <object type="image/svg+xml" data="toronto.svg"></object>
       </footer>
+      <div>
+        <span><a href="https://github.com/cablehead/smallweb-sidepro">source</a></span>
+      </div>
     </main>
   </body>
 </html>
